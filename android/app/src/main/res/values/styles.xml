@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- 앱의 모든 장면 기본 테마 -->
+    <style name="AppTheme.ObjectDetection" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/tfe_color_primary</item>
+        <item name="colorPrimaryDark">@color/tfe_color_primary_dark</item>
+        <item name="colorAccent">@color/tfe_color_accent</item>
+    </style>
+
+    <!-- 스플래시 화면에 표시될 테마 원래 @drawable/img_splash 이거였음  -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.tensorflow.lite.examples.detection"
+    > <!--manifest 파일에 다른 것들 좀 들어감-->
+
+    <!-- Tell the system this app requires OpenGL ES 3.1. -->
+    <uses-feature android:glEsVersion="0x00030001" android:required="true" />
+
+    <uses-sdk
+        tools:overrideLibrary="
+          androidx.camera.camera2, androidx.camera.core,
+          androidx.camera.view, androidx.camera.lifecycle" />  <!-- 원래는 아무 것도 없었는데, 새로 채워넣은거임. 원본은 이거 <uses-sdk /> -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 이건 오디오 녹음 권한 설정임. -->
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+    </queries>
+    <!-- Android 11(API 30) 이상에서 앱이 다른 앱이나 서비스에 액세스할 수 있도록 정의합니다.
+    여기서는 TTS(Text-to-Speech) 서비스에 대한 액세스를 요청합니다. -->
+
+    <!-- label이 이름인듯 /debuggable="true"였음
+    android:icon: 앱의 기본 아이콘을 설정합니다.
+android:label: 앱의 이름을 설정합니다.
+android:roundIcon: 둥근 아이콘 리소스를 설정합니다(안드로이드 7.1 이상에서 사용).
+android:supportsRtl: 앱이 오른쪽에서 왼쪽(RTL) 레이아웃을 지원하는지 여부를 설정합니다.
+android:theme: 앱의 기본 테마를 설정합니다.
+android:hardwareAccelerated: 앱이 하드웨어 가속을 사용할 수 있는지를 설정합니다.
+android:debuggable: 디버깅 가능 여부를 설정합니다. false로 설정하면 디버깅이 불가능합니다.
+android:installLocation: 앱의 설치 위치를 설정합니다. internalOnly는 앱이 내부 저장소에만 설치될 수 있음을 나타냅니다.a
+    -->
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/tfe_od_app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ObjectDetection"
+        android:hardwareAccelerated="true"
+        android:debuggable="false"
+        android:installLocation="internalOnly">
+
+
+        <!-- android:name=".DetectorActivity" 여기가 처음 실행되는 객체 넣는 곳
+         android:screenOrientation="portrait"  이건 안 쓰는듯
+         LAUNCHER가 들어간 곳이 가장 먼저 실행되는 곳을 의미함.
+         -->
+        <!-- 아래는 원본 내용 -->
+        <!--
+        <activity
+            android:name=".DetectorActivity"
+            android:label="@string/tfe_od_app_name"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <!-- <activity>로 감싸놓고, 실행되는 모든 객체 파일들 이름 다 넣기
+         예를 들면  <activity android:name="org.tensorflow.lite.examples.shownow1.DetectorActivity"></activity>
+        <activity android:name="org.tensorflow.lite.examples.shownow1.TutorialActivity"></activity> 이런 식으로-->
+
+        <!-- 여기부터 수정 시작 -->
+        <activity
+            android:name="org.tensorflow.lite.examples.detection.HomeActivity"
+            android:exported="true">
+            <!--            android:label="@string/tfe_od_app_name"-->
+            <!--            android:screenOrientation="portrait">-->
+        </activity>
+
+        <activity
+            android:name="org.tensorflow.lite.examples.detection.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme"> <!-- 여기 수정하기!!!!!!!!!!!!! 기존에는 @style/SplashTheme이거였음 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="org.tensorflow.lite.examples.detection.DetectorActivity"></activity>
+        <activity android:name="org.tensorflow.lite.examples.detection.AudioActivity"></activity>
+        <!-- 여기까지 수정된 것 -->
+
+    </application>
+</manifest>

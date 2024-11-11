@@ -1,0 +1,14 @@
+<resources>
+    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">Touch And Talk</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="tutorial_msg">이 어플리케이션은 시각장애인을 위한 음료 인식 서비스입니다.
+        카메라를 통해 자판기 음료를 인식하고, 음료의 정보를 음성으로 안내합니다.
+        시스템의 작동 방식은 다음과 같습니다.
+        1. 시작하기
+        2. 카메라 위치 설정: 음료를 인식할 위치에 카메라를 맞춥니다.
+        3. 화면 터치: 화면을 터치하면 약 1-2초 후에 객체 인식이 시작됩니다.
+        4. 음성 안내: 객체 인식이 완료된 후, 화면을 다시 터치하면 음료 정보를 음성으로 안내합니다.
+        5. 뒤로가기: "뒤로가기"를 누르면 객체 인식 전 상태로 돌아갑니다.
+        6. 처음으로: "처음으로"를 누르면 홈 화면으로 돌아갑니다.</string>
+    <string name="error_msg">음료를 인식하지 못했습니다. 다시 한 번 촬영해주세요.</string>
+</resources>
