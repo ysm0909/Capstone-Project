@@ -44,3 +44,8 @@
 
 # Test Version
 <img src="https://github.com/user-attachments/assets/32d87eff-8379-4a9c-8dd4-d5172f8dcd8e" width="700" height="300">
+
+### References
+https://github.com/AarohiSingla/TFLite-Object-Detection-Android-App-Tutorial-Using-YOLOv5 </br>
+https://github.com/ultralytics/yolov5
+
