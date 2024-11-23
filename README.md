@@ -10,7 +10,7 @@
 &nbsp;이에 시각장애인을 위한 음료 인식 서비스를 주제로 선정하였으며, 현실적 한계를 고려해 충북대학교 자판기 음료 데이터를 기반으로 연구를 진행했다. 이 서비스는 시각장애인이 자판기에서 음료를 쉽게 인식하고 선택할 수 있도록 돕는 것을 목표로 한다.
 
 # 동작 방식
-<img src="https://github.com/user-attachments/assets/a8869f30-74df-480b-ac31-1d8c7fd042f7" width="800" height="300">
+<img src="https://github.com/user-attachments/assets/1988479a-00b8-41d5-8e46-4496bc851336" width="800" height="300">
 
 # 설계 내용
 ## 개발 환경
